@@ -44,19 +44,3 @@ Expected output:
 ```text
 ensemble split=test r2=0.911604 rmse=0.831564 mae=0.544736
 ```
-
-## Repository Setup
-
-For a new GitHub repository:
-
-```powershell
-git init
-git lfs install
-git add .gitattributes README.md AutoMulti-ML-testing-package packages
-git commit -m "Add AutoMulti packaged app and ML testing package"
-git branch -M main
-git remote add origin <your-github-repo-url>
-git push -u origin main
-```
-
-If you copy these files into an existing repository, keep `.gitattributes` at the repository root before running `git add`.
