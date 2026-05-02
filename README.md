@@ -3,24 +3,11 @@
 This repository contains two public-facing AutoMulti artifacts:
 
 - `AutoMulti-ML-testing-package/`: inference-only ML testing package.
-- `packages/AutoMulti-windows-x64-20260425_223350.zip`: packaged Windows x64 application.
+
 
 Large binary files are tracked with Git LFS. Install Git LFS before cloning or pushing this repository.
 
-## Windows Application
 
-1. Download or clone the repository with Git LFS enabled.
-2. Unzip `packages/AutoMulti-windows-x64-20260425_223350.zip`.
-3. Keep the extracted `AutoMulti/` directory structure unchanged.
-4. Run `AutoMulti/AutoMulti.exe`.
-
-Checksum:
-
-```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath .\packages\AutoMulti-windows-x64-20260425_223350.zip
-```
-
-Compare the result with `packages/AutoMulti-windows-x64-20260425_223350.sha256.txt`.
 
 ## ML Testing Package
 
