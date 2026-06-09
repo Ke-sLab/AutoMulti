@@ -1,0 +1,35 @@
+The AutoMulti revision submission repository is available at:
+https://github.com/Ke-sLab/AutoMulti
+
+Please clone the repository with Git LFS enabled, or download a GitHub source
+archive only if Git LFS objects are included in repository archives.
+
+The Windows GUI application is provided at:
+packages/AutoMulti-windows-x64-20260609_revision_submission.zip
+
+This package is the current revision-submission Windows x64 binary-only onedir
+build. AutoMulti source code, tests, build scripts, and the development
+repository are not included in this submission repository.
+
+The AutoMulti compiled binary is distributed under the proprietary EULA stored
+at:
+LICENSE_AUTOMULTI_EULA.txt
+
+Third-party notices and Qt/PySide6 LGPL relinking information are provided in:
+THIRD_PARTY_NOTICES.md
+QT_LGPL_RELINKING.md
+
+The companion ML reproducibility package is provided at:
+AutoMulti-ML-testing-package/
+
+External programs including Multiwfn, xTB, Gaussian, and ORCA are not
+redistributed and must be installed separately where needed.
+
+The companion ML package can be verified from AutoMulti-ML-testing-package/ with:
+python scripts\runtest_final_dataset.py --mode ensemble --split test
+
+Expected output:
+ensemble split=test r2=0.911604 rmse=0.831564 mae=0.544736
+
+The reported ML result reproduces GFN2-xTB reference labels and is not intended
+as DFT- or experiment-level validation.

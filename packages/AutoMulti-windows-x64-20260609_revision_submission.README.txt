@@ -1,0 +1,23 @@
+﻿AutoMulti distribution bundle
+
+1. Unzip the archive.
+2. Keep the AutoMulti folder structure unchanged.
+3. Launch AutoMulti.exe from the extracted AutoMulti directory.
+4. If startup fails, run verify_on_target.ps1 in the AutoMulti directory.
+
+Notes:
+- First launch can take several seconds.
+- User data is stored under %%APPDATA%%\AutoMulti.
+- AutoMulti is distributed as a binary-only Windows x64 onedir package under a proprietary End User License Agreement (EULA). See LICENSE.txt.
+- AutoMulti source code, tests, build scripts, and the development repository are not included in this package.
+- The package contains third-party runtime components. See THIRD_PARTY_NOTICES.md.
+- The package contains LGPL-licensed PySide6/Qt runtime libraries. See THIRD_PARTY_NOTICES.md and QT_LGPL_RELINKING.md.
+- Keep the AutoMulti folder structure unchanged means keeping relative paths intact; it does not prohibit replacing LGPL runtime libraries with ABI-compatible builds.
+- PaDEL backend requires Java (java.exe) available in PATH.
+- CDK-pywrapper backend is optional.
+- 3D viewer requires OpenGL-capable graphics drivers.
+- Diagnostics command:
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\verify_on_target.ps1 -StrictVispy -StrictPadelModule
+- If diagnostics show overall_result: pass with java_path: fail, the app is launchable and only PaDEL is unavailable.
+- After installing Java, rerun:
+  .\AutoMulti.exe --backend-probe --strict-padel-module
